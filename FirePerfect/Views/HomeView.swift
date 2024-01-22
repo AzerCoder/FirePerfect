@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject var database = RealtimeStore()
     @EnvironmentObject var session: SessionStore
     @State var isLoading = false
+    
     func doLogOut(){
         isLoading = true
         if SessionStore().signOut(){
@@ -18,11 +20,21 @@ struct HomeView: View {
         }
     }
     
+    func apiPosts(){
+        isLoading = true
+        database.loadPosts {
+            isLoading = false
+            print(database.items.count)
+        }
+    }
+    
     var body: some View {
         NavigationView{
             ZStack{
-                if session.session != nil{
-                    Text((session.session?.email)!)
+                List{
+                    ForEach(database.items, id:\.self){ item in
+                        PostCell(post: item)
+                    }
                 }
                 
                 if isLoading{
@@ -31,15 +43,20 @@ struct HomeView: View {
                 
             }
             .navigationBarItems(trailing: HStack{
-                Image(systemName: "rectangle.stack.badge.plus")
+                NavigationLink(destination: AddPostView(), label: {
+                    Image(systemName: "rectangle.stack.badge.plus")
+                })
                 Button(action: {
                     doLogOut()
                 }, label: {
                     Image(systemName: "arrow.right.doc.on.clipboard")
                 })
                 
-            })
-            .navigationBarTitle("Posts",displayMode: .inline)
+            }.foregroundColor(.black)
+            )
+            .navigationBarTitle("Contact",displayMode: .inline)
+        }.onAppear(){
+            apiPosts()
         }
     }
 }

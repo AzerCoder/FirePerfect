@@ -10,5 +10,6 @@ target 'FirePerfect' do
 	pod 'Firebase/Firestore'
 	pod 'FirebaseAuth'
 	pod 'FirebaseFirestore'
+	pod 'Firebase/Database'
 
 end

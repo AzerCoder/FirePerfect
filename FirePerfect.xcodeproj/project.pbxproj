@@ -14,6 +14,10 @@
 		821B51432B5E4D4E0001EEA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B51422B5E4D4E0001EEA2 /* SceneDelegate.swift */; };
 		821B51472B5E4D780001EEA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B51462B5E4D780001EEA2 /* User.swift */; };
 		821B51492B5E4D8F0001EEA2 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B51482B5E4D8F0001EEA2 /* SessionStore.swift */; };
+		826E70F12B5E882D0035EF6D /* RealTimeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E70F02B5E882D0035EF6D /* RealTimeStore.swift */; };
+		826E70F32B5E889B0035EF6D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E70F22B5E889B0035EF6D /* Post.swift */; };
+		826E70F52B5E8DE00035EF6D /* AddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E70F42B5E8DE00035EF6D /* AddPostView.swift */; };
+		826E70F82B5E97600035EF6D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E70F72B5E97600035EF6D /* PostCell.swift */; };
 		82BECC572B5C4B5000CBB299 /* FirePerfectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BECC562B5C4B5000CBB299 /* FirePerfectApp.swift */; };
 		82BECC592B5C4B5000CBB299 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BECC582B5C4B5000CBB299 /* ContentView.swift */; };
 		82BECC5B2B5C4B5200CBB299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82BECC5A2B5C4B5200CBB299 /* Assets.xcassets */; };
@@ -31,6 +35,10 @@
 		821B51422B5E4D4E0001EEA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		821B51462B5E4D780001EEA2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		821B51482B5E4D8F0001EEA2 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		826E70F02B5E882D0035EF6D /* RealTimeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeStore.swift; sourceTree = "<group>"; };
+		826E70F22B5E889B0035EF6D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		826E70F42B5E8DE00035EF6D /* AddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostView.swift; sourceTree = "<group>"; };
+		826E70F72B5E97600035EF6D /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		82BECC532B5C4B5000CBB299 /* FirePerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirePerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82BECC562B5C4B5000CBB299 /* FirePerfectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirePerfectApp.swift; sourceTree = "<group>"; };
 		82BECC582B5C4B5000CBB299 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +94,7 @@
 				821B513A2B5E4D0D0001EEA2 /* SignInView.swift */,
 				821B513C2B5E4D170001EEA2 /* SignUpView.swift */,
 				821B513E2B5E4D200001EEA2 /* HomeView.swift */,
+				826E70F42B5E8DE00035EF6D /* AddPostView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -94,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				821B51482B5E4D8F0001EEA2 /* SessionStore.swift */,
+				826E70F02B5E882D0035EF6D /* RealTimeStore.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -102,8 +112,17 @@
 			isa = PBXGroup;
 			children = (
 				821B51462B5E4D780001EEA2 /* User.swift */,
+				826E70F22B5E889B0035EF6D /* Post.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		826E70F62B5E97530035EF6D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				826E70F72B5E97600035EF6D /* PostCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		82BECC4A2B5C4B5000CBB299 = {
@@ -127,6 +146,7 @@
 		82BECC552B5C4B5000CBB299 /* FirePerfect */ = {
 			isa = PBXGroup;
 			children = (
+				826E70F62B5E97530035EF6D /* Cells */,
 				821B51452B5E4D6C0001EEA2 /* Model */,
 				821B51442B5E4D5C0001EEA2 /* Networking */,
 				821B51392B5E4CF20001EEA2 /* Views */,
@@ -263,13 +283,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				821B51412B5E4D450001EEA2 /* AppDelegate.swift in Sources */,
+				826E70F32B5E889B0035EF6D /* Post.swift in Sources */,
+				826E70F82B5E97600035EF6D /* PostCell.swift in Sources */,
 				821B51432B5E4D4E0001EEA2 /* SceneDelegate.swift in Sources */,
+				826E70F12B5E882D0035EF6D /* RealTimeStore.swift in Sources */,
 				821B513D2B5E4D170001EEA2 /* SignUpView.swift in Sources */,
 				821B513B2B5E4D0D0001EEA2 /* SignInView.swift in Sources */,
 				821B51472B5E4D780001EEA2 /* User.swift in Sources */,
 				821B51492B5E4D8F0001EEA2 /* SessionStore.swift in Sources */,
 				82BECC592B5C4B5000CBB299 /* ContentView.swift in Sources */,
 				821B513F2B5E4D200001EEA2 /* HomeView.swift in Sources */,
+				826E70F52B5E8DE00035EF6D /* AddPostView.swift in Sources */,
 				82BECC572B5C4B5000CBB299 /* FirePerfectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
