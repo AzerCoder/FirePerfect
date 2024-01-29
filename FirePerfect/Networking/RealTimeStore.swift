@@ -16,7 +16,7 @@ class RealtimeStore: ObservableObject {
     
     func storePost(post: Post, completion: @escaping (_ success: Bool) -> ()) {
         var success = true
-        let toBePosted = ["firstname": post.firstname!, "lastname": post.lastname!, "phone": post.phone!]
+        let toBePosted = ["firstname": post.firstname!, "lastname": post.lastname!, "phone": post.phone!,"imgUrl": post.imgUrl!]
         
         ref.childByAutoId().setValue(toBePosted){ (error, ref) -> Void in
             if error != nil{
@@ -35,7 +35,8 @@ class RealtimeStore: ObservableObject {
                     let firstname = value!["firstname"] as? String
                     let lastname = value!["lastname"] as? String
                     let phone = value!["phone"] as? String
-                    self.items.append(Post(firstname: firstname, lastname: lastname, phone: phone))
+                    let imgUrl = value!["imgUrl"] as? String
+                    self.items.append(Post(firstname: firstname, lastname: lastname, phone: phone,imgUrl: imgUrl))
                 }
             }
             completion()

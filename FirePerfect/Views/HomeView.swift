@@ -35,7 +35,7 @@ struct HomeView: View {
                     ForEach(database.items, id:\.self){ item in
                         PostCell(post: item)
                     }
-                }
+                }.listStyle(PlainListStyle())
                 
                 if isLoading{
                     ProgressView()

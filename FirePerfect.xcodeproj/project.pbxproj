@@ -23,6 +23,8 @@
 		82BECC5B2B5C4B5200CBB299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82BECC5A2B5C4B5200CBB299 /* Assets.xcassets */; };
 		82BECC5E2B5C4B5200CBB299 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82BECC5D2B5C4B5200CBB299 /* Preview Assets.xcassets */; };
 		82BECC652B5C4BE500CBB299 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82BECC642B5C4BE500CBB299 /* GoogleService-Info.plist */; };
+		82DB8C092B666EB800EBB230 /* StorageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DB8C082B666EB800EBB230 /* StorageStore.swift */; };
+		82DB8C0C2B6670D000EBB230 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DB8C0B2B6670D000EBB230 /* ImagePicker.swift */; };
 		B7E91BDCD564ADA870302C89 /* Pods_FirePerfect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2561CF69EFC3C11EDBA6D3 /* Pods_FirePerfect.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		82BECC5A2B5C4B5200CBB299 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82BECC5D2B5C4B5200CBB299 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		82BECC642B5C4BE500CBB299 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		82DB8C082B666EB800EBB230 /* StorageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageStore.swift; sourceTree = "<group>"; };
+		82DB8C0B2B6670D000EBB230 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DCF73744AD89550188ED7CF8 /* Pods-FirePerfect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirePerfect.debug.xcconfig"; path = "Target Support Files/Pods-FirePerfect/Pods-FirePerfect.debug.xcconfig"; sourceTree = "<group>"; };
 		FA6F24962335FCE18DF58125 /* Pods-FirePerfect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirePerfect.release.xcconfig"; path = "Target Support Files/Pods-FirePerfect/Pods-FirePerfect.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +108,7 @@
 			children = (
 				821B51482B5E4D8F0001EEA2 /* SessionStore.swift */,
 				826E70F02B5E882D0035EF6D /* RealTimeStore.swift */,
+				82DB8C082B666EB800EBB230 /* StorageStore.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 		82BECC552B5C4B5000CBB299 /* FirePerfect */ = {
 			isa = PBXGroup;
 			children = (
+				82DB8C0A2B6670BE00EBB230 /* Helper */,
 				826E70F62B5E97530035EF6D /* Cells */,
 				821B51452B5E4D6C0001EEA2 /* Model */,
 				821B51442B5E4D5C0001EEA2 /* Networking */,
@@ -165,6 +171,14 @@
 				82BECC5D2B5C4B5200CBB299 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		82DB8C0A2B6670BE00EBB230 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				82DB8C0B2B6670D000EBB230 /* ImagePicker.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +299,7 @@
 				821B51412B5E4D450001EEA2 /* AppDelegate.swift in Sources */,
 				826E70F32B5E889B0035EF6D /* Post.swift in Sources */,
 				826E70F82B5E97600035EF6D /* PostCell.swift in Sources */,
+				82DB8C092B666EB800EBB230 /* StorageStore.swift in Sources */,
 				821B51432B5E4D4E0001EEA2 /* SceneDelegate.swift in Sources */,
 				826E70F12B5E882D0035EF6D /* RealTimeStore.swift in Sources */,
 				821B513D2B5E4D170001EEA2 /* SignUpView.swift in Sources */,
@@ -293,6 +308,7 @@
 				821B51492B5E4D8F0001EEA2 /* SessionStore.swift in Sources */,
 				82BECC592B5C4B5000CBB299 /* ContentView.swift in Sources */,
 				821B513F2B5E4D200001EEA2 /* HomeView.swift in Sources */,
+				82DB8C0C2B6670D000EBB230 /* ImagePicker.swift in Sources */,
 				826E70F52B5E8DE00035EF6D /* AddPostView.swift in Sources */,
 				82BECC572B5C4B5000CBB299 /* FirePerfectApp.swift in Sources */,
 			);
